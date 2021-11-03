@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <link rel="icon" href="bmw.png" >
+    <link rel="stylesheet" href="Mapa.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BMW</title>
+  </head>
+<body>
+  <div class="alt">
+    <header>
+    <div class="alt2">
+      <div class="bmw">
+      <img src="Bmwb.png">
+      </div>
+      <div class="klasa" id="klasa">
+      <ul>
+        <i class="fa fa-close" onclick="closeMenu()"></i>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://www.bmwinfo.com/">Modelet</a></li>
+        <li><a href="https://www.bmwgroup.com/en/company.html">Rreth nesh</a></li>
+        <li><a href="forms.html">Kyçu</a></li>
+        <li><a href="Mapa.html">Lokacioni</a></li>
+      </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+    </div>
+  </header>
+  <a class="scroll-btn" href="#"><i class="fa fa-arrow-up"></i></a>
+    <div class="ceni">
+      <small><h3 style="text-align: center;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2189.651090507379!2d-122.32650008496468!3d47.594180496830035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906a97fa59d207%3A0x1ef7fce059903fb9!2sBMW%20Seattle!5e1!3m2!1sen!2s!4v1616015368669!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></h3></small>
+    </div>
+  </div>
+<footer>
+  <div class="content">
+    <h3>BMW AG 2021</h3>
+    <p> Mbërtheni timonin e ndonjë prej automjeteve tona M dhe ngritni adrenalinën në një nivel më të lartë.</p>
+    <ul class="socials">
+      <li><a href="https://twitter.com/BMWUSA"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/bmwau/"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/BMWAustralia"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UC2fD3blIgfF1lLYGxA0K12A"><i class="fa fa-youtube"></i></a></li>
+    </ul>
+  </div>
+  <div class="bottom">
+    <p>copyright &copy;2020 CENNI CORP. designed by Hysen Lubovci <span></span></p>
+  </div>
+</footer>
+<div class="intro">
+  <div class="intro-text">
+        <h1 class="hide">
+      <span class="text">Lokacioni</span>
+    </h1>
+  </div>
+</div>
+<div class="slider-2"></div>
+<script>
+  var show = document.getElementById("klasa");
+   function showMenu() {
+     show.style.right = "0px"
+  }
+  function closeMenu() {
+    show.style.right = "-200px";
+  }
+  window.addEventListener('scroll', function() {
+    var header=document.querySelector("header");
+    let windowPosition =  window.scrollY > 0;
+    header.classList.toggle("sticky", windowPosition);
+  })
+  window.addEventListener('scroll',function(){
+    var scroll = document.querySelector('.scroll-btn');
+    scroll.classList.toggle("active", window.scrollY > 0);
+  })
+</script>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script>
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+tl.to(".slider-2", { y: "-100%", duration: 1.5, delay: 0.25 });
+tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+</script>
+</body>
+</html>
